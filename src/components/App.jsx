@@ -69,7 +69,7 @@ export class App extends Component {
             alignItems: 'center',
             fontSize: 40,
             color: '#010101'
-          }}
+          }} 
         >
 
           

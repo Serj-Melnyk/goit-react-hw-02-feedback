@@ -22,6 +22,7 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #2986cc;
+    color: #ffffff;
     cursor: pointer;
   }
   &:first-letter {
