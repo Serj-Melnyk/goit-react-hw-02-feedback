@@ -2,7 +2,7 @@
 import { ButtonOptions, Button } from "./FeedbackOptionsStyled"
 import PropTypes from "prop-types"
 
-export const FeedbackOptions = ({options, onLeaveFeedback}) => {
+export const FeedbackOptions = ({options, onLeaveFeedback }) => {
     
     return (
 
@@ -19,7 +19,8 @@ export const FeedbackOptions = ({options, onLeaveFeedback}) => {
             <Button onClick={onNeutral}>Neutral</Button>
             <Button onClick={onBad}>Bad</Button> */}
         
-        </ButtonOptions >       
+            </ButtonOptions > 
+  
        
     );   
 };

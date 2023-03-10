@@ -4,6 +4,7 @@ import { Statistics } from "./Statistics/Statistics";
 import { Section } from "./Section/Section";
 import { Notification } from "./Notification/Notification";
 import { GlobalStyle } from "./GlobalStyle";
+import { Layout } from "./Layout/Layout";
 
 
 export class App extends Component {
@@ -60,24 +61,15 @@ export class App extends Component {
     const countTotalFeedback = good + neutral + bad
     const countPositiveFeedbackPercentage = Math.round(good / (good + neutral + bad) * 100)
 
-      return (
-        <div
-          style={{
-            height: '100vh',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: 40,
-            color: '#010101'
-          }} 
-        >
+    return (
+        
 
-          
-           <Section>
-            
-            <h2>Please leave feedback</h2>
+      <Layout>
+        
+          <Section title="Please leave feedback">
             
             <FeedbackOptions
+              
               options={Object.keys(this.state)}
               onLeaveFeedback={this.onLeaveFeedback}
 
@@ -87,6 +79,9 @@ export class App extends Component {
             // onBad={this.onOptionBad}
           
             />
+            </Section>
+
+             <Section title="Statistics">
 
             {countTotalFeedback > 0
               
@@ -105,7 +100,7 @@ export class App extends Component {
 
           <GlobalStyle />
         
-        </div>
+        </Layout>
       )
     };
 };
